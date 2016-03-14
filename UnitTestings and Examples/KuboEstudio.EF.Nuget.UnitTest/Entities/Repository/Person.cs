@@ -11,7 +11,7 @@ namespace KuboEstudio.EF.Nuget.UnitTest.Entities.Repository
     [Table("dbo", "People")]
     internal class Person : Item
     {
-        [PrimaryKey(defaultValue: 0), Identity]
+        [PrimaryKey(), Identity]
         [DBColumn("ID")]
         public int Identifier { get; set; }
 

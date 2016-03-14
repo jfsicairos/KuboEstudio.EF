@@ -12,7 +12,7 @@ namespace KuboEstudio.EF.Nuget.UnitTest.Entities.Repository
     [Table("dbo", "Phones")]
     internal class Phone : Item
     {
-        [PrimaryKey(defaultValue: 0), Identity]
+        [PrimaryKey(), Identity]
         public int ID { get; set; }
 
         [DBColumn("PhoneNumber")]
