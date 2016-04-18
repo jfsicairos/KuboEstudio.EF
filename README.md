@@ -180,4 +180,4 @@ In order to use the following methods is necessary to add the approviate attribu
 # Helpers:
 
   * <b>Transform</b> (<b>KuboEstudio.EF.Resources.Transform</b>)<b>:</b><br />
-	This will helps to transform a DataSet, DataTable or DataRow to an class entity.
+	This will helps to transform a DataSet, DataTable or DataRow to an class entity. This will use the name of the Property as the name to relate with the DataColumn, in case you want that the Property name is different than the DataColumn name you use use the DBColumn attribute.
