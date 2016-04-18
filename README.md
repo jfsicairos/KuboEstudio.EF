@@ -126,6 +126,57 @@ Methods (please refer to the "UnitTestings and Examples"):<br />
 	Ex. repository.DeleteOnMemory(myClassObj);<br /><br />
 	<b>NOTES:</b> In order to execute the instructions you can only run the unitOfWork.Commit() or in case you don't want to execute anything you can do unitOfWork.Undo();<br /><br />
 
+#Class Definitions:
+In order to use the following methods is necessary to add the approviate attributes to the class to use (please refer to the manual) and create a <b>IUnitOfWork</b> and <b>IRepository</b> object, which are created like the following:
+
+  * <b>Database Mapping</b> (<b>KuboEstudio.EF.Schema.Attributes</b>)<b>:</b><br />
+    In order to link the class to a table or view we have different attributes that can be use, which are the following:
+    * <b>Class Attributes</b>:
+      * <b>Table</b>
+      	* Specifies the table related to the class.
+      * <b>View</b>
+      	* Specifies the view related to the class.
+    * <b>Property Attributes</b>:
+      * <b>PrimaryKey</b>
+      	* Specifies that the property represent a PK column on the database.
+      * <b>Identity</b>
+      	* Specifies that the property represent an Identity column on the database.
+      * <b>DBColumn</b>
+      	* Specifies the real name of the column in the table specified in case the property name is not the same.
+      	* <b>NOTE:</b> By default the name of the property is used as the name of the column
+      * <b>NotDBColumn</b>
+      	* Specifies that the property is not a column in the database.
+      * <b>ForeignKey</b>
+      	* Specifies that the property with this attribute is contains the primitive value related to ForeignProperty of the current object.
+      * <b>ForeignProperty</b>
+      	* Specifies that the property with this attribute is a parent of the current object.
+      * <b>ChildForeignProperty</b>
+      	* Specifies that the property with this attribute is a child of the current object.
+      * <b>CascadeAll</b>
+      	* Specifies that when save/delete the current object the <b>ChildForeignProperty</b> or <b>ForeignProperty</b> properties that contains this attribute will execute the same action.
+      * <b>CascadeOnSave</b>
+      	* Specifies that when save the current object the <b>ChildForeignProperty</b> or <b>ForeignProperty</b> properties that contains this attribute will execute the same action.
+      * <b>CascadeOnDelete</b>
+      	* Specifies that when delete the current object the <b>ChildForeignProperty</b> or <b>ForeignProperty</b> properties that contains this attribute will execute the same action.
+
+  * <b>Azure Tables Mapping</b> (<b>KuboEstudio.EF.Azure.Schema.Attributes</b>)<b>:</b><br />
+    In order to link the class to an azure table we have different attributes that can be use, which are the following:
+    * <b>Class Attributes</b>:
+      * <b>AzureTable</b>
+      	* Specifies the table related to the class.
+    * <b>Property Attributes</b>:
+      * <b>AzureColumn</b>
+      	* Specifies that the property is not a column in the database.
+      	* <b>NOTE:</b> By default the name of the property is used as the name of the column.
+      * <b>NotAzureColumn</b>
+      	* Specifies that the property is not a column in the database.
+      * <b>AzureForeignKey</b>
+      	* Specifies that the property with this attribute is contains the primitive value related to AzureForeignProperty of the current object.
+      * <b>AzureForeignProperty</b>
+      	* Specifies that the property with this attribute is a parent of the current object.
+      * <b>AzureChildForeignProperty</b>
+      	* Specifies that the property with this attribute is a child of the current object.
+
 # Helpers:
 
   * <b>Transform</b> (<b>KuboEstudio.EF.Resources.Transform</b>)<b>:</b><br />
