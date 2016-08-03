@@ -88,6 +88,8 @@ Methods (please refer to the "UnitTestings and Examples"):<br />
   * <b>Count:</b> Get a simple count based on the conditions specified.<br />
     Ex. <b>int</b> total = repository.Count();<br />
 	Ex. <b>int</b> totalFiltered = repository.Count(new Restriction("Description", Condition.Like, "%Val%"));
+  * <b>Select:</b> Gets the records that meet the restrictions with a top clause.<br />
+    Ex. <b>List</b><<b>MyClass</b>> results = repository.Where(2, new Restriction("Description", Condition.Like, "%Val%"));
   * <b>Where:</b> Gets the records that meet the restrictions.<br />
     Ex. <b>List</b><<b>MyClass</b>> results = repository.Where(new Restriction("Description", Condition.Like, "%Val%"));
   * <b>Delete:</b> Delete a record based on the primary key or an entity.<br />
@@ -115,6 +117,8 @@ Methods (please refer to the "UnitTestings and Examples"):<br />
   * <b>Count:</b> Get a simple count based on the conditions specified.<br />
     Ex. <b>int</b> total = repository.Count();<br />
 	Ex. <b>int</b> totalFiltered = repository.Count(new Restriction("Description", Condition.Like, "%Val%"));
+  * <b>Select:</b> Gets the records that meet the restrictions with a top clause.<br />
+    Ex. <b>List</b><<b>MyClass</b>> results = repository.Where(2, new Restriction("Description", Condition.Like, "%Val%"));
   * <b>Where:</b> Gets the records that meet the restrictions.<br />
     Ex. <b>List</b><<b>MyClass</b>> results = repository.Where(new Restriction("Description", Condition.Like, "%Val%"));
   * <b>Delete:</b> Delete a record based on the primary key or an entity.<br />
